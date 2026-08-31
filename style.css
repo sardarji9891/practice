@@ -1,0 +1,537 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.main {
+  padding-bottom: 4rem;
+  background: #eba613;
+  background: linear-gradient(354deg, rgba(235, 166, 19, 1) 0%, rgba(250, 247, 242, 1) 40%, rgba(222, 170, 67, 0.64) 100%);
+  
+}
+
+/*    2. Header Navigation   */
+header {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding-left: 35px;
+  margin-bottom: 5px;
+  height: 90px;
+  color: white;
+  cursor: pointer;
+  background-color: #60241E;
+}
+
+.signin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 16px;
+  width: auto;
+  min-width: 90px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background: #c1a923;
+  background: linear-gradient(176deg, rgba(255, 221, 28, 1) 15%, rgba(232, 223, 97, 1) 60%, rgba(224, 209, 72, 1) 100%);
+  border-radius: 15px;
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+.signin:hover {
+  filter: brightness(1.05);
+}
+
+.signin:active {
+  transform: scale(0.95);
+}
+
+
+.shopname {
+  padding-top: 26px;
+}
+
+.itemsection {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 30px;
+  font-size: larger;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.box {
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+/* 
+food shop container */
+.food-shop-banner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 4rem 3rem;
+  gap: 30px;
+  width: 100%;
+  align-items: center;
+  padding-left: 3rem;
+  background-color: #fdfaf2;
+}
+
+.mainline {
+  flex: 1;
+  min-width: 300px;
+}
+
+.mainline h1 {
+  font-size: clamp(36px, 6vw, 72px);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #64271e;
+}
+
+.mainline h1 span {
+  color: rgb(210, 160, 10);
+}
+
+.mainline p {
+  font-size: clamp(16px, 1.2vw, 20px);
+  color: rgba(66, 64, 64, 0.9);
+  line-height: 1.6;
+}
+
+.foodshopimg {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.foodshopimg img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  object-fit: contain;
+
+}
+
+/* 
+   3. Sliding Cart Drawer (Fixed & Isolated)
+*/
+.cartcontainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 350px;
+  max-width: 100%;
+  position: fixed;
+  padding: 3rem;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #eba613;
+  background: linear-gradient(354deg, rgba(235, 166, 19, 1) 0%, rgba(250, 247, 242, 1) 40%, rgba(222, 170, 67, 0.64) 100%);
+
+  z-index: 100;
+  background-color: white;
+  transform: translateX(100%);
+  transition: transform 0.5s ease, visibility 0.5s;
+  visibility: hidden;
+}
+
+.cartcontainer.open {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.yourcart {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  gap: 10px;
+  margin-bottom: 30px;
+  color: rgb(8, 0, 255);
+}
+
+.cartitems {
+  width: 100%;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.cart-total div {
+  font-size: large;
+  font-weight: bold;
+}
+
+.totalprice {
+  display: flex;
+  gap: 4px;
+}
+
+.close {
+  border: none;
+  border-radius: 15px;
+  color: white;
+  background-color: rgb(66, 63, 19);
+  cursor: pointer;
+  transition: transform ease .5s;
+}
+
+.close:active {
+  transform: scale(1.1);
+}
+
+/* 
+   4. Fast Food Grid Items Component
+ */
+.fastfood {
+  line-height: 1.2;
+  font-weight: bolder;
+  padding-left: 3rem;
+  padding-top: 1.4rem;
+  text-transform: uppercase;
+  color: #f7f7f6;
+}
+
+.imgboxmain {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.imgbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.img1 {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  aspect-ratio: 1.2 / 1;
+  box-shadow: rgba(0, 0, 0, 0.412) 0px 5px 15px;
+  border-radius: 5px;
+  object-fit: cover;
+  transition: transform ease .7s;
+}
+
+.img1:hover {
+  transform: scale(1.02);
+}
+
+.imgbox h4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-transform: capitalize;
+  color: #64271e;
+  letter-spacing: 2px;
+}
+
+.imgbox p {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  height: 2.5rem;
+  color: rgba(66, 64, 64, 0.859);
+  text-align: center;
+}
+
+.imgbox p::-webkit-scrollbar {
+  display: none;
+}
+
+.imgbutton {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+  width: 100%;
+  max-width: 350px;
+  gap: 10px;
+}
+
+.imgbutton button {
+  height: 35px;
+  font-size: medium;
+  color: #fdedca;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  border: transparent;
+  box-shadow: 3px 3px 3px rgba(42, 41, 41, 0.578);
+  transition: transform ease .5s;
+  cursor: pointer;
+}
+
+.imgbutton button:active {
+  background-color: #0a0a0ad6;
+  transform: scale(1.05);
+}
+
+/* 
+   5. Healthy Items Component (Horizontal Gallery)
+  */
+.healthyitembox {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow-x: auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.healthyitembox::-webkit-scrollbar {
+  display: none;
+}
+
+.healthyimg {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 100%;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  gap: 2rem;
+}
+
+.healthyimg img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.healthyimg h2 {
+  color: #64271e;
+  margin-bottom: 0.5rem;
+}
+
+.imgdescript ul li {
+  color: #373636;
+
+}
+
+/*
+   6. Footer Styles*/
+.site-footer {
+  background-color: rgb(69, 29, 23);
+  color: #e0e0e0;
+  padding: 60px 20px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  /* Adaptive grid handles transitions dynamically */
+  gap: 40px;
+}
+
+.footer-column h3.footer-logo {
+  color: #ffffff;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.footer-heading {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #a0a0a0;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.social-links a {
+  color: #ffffff;
+  background-color: #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.social-links a:hover {
+  background-color: #555;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #5f5252;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.newsletter-form input[type="email"]:focus {
+  outline: none;
+  border-color: #666;
+}
+
+.newsletter-form button {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #e0e0e0;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+}
+
+/* 
+   7. Media Queries (Responsive Engineering)
+    */
+@media (max-width: 1024px) {
+  header {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 15px;
+  }
+
+  .food-shop-banner {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .mainline h1 {
+    margin-bottom: 1rem;
+  }
+
+  .itemsection {
+    padding: 15px 0;
+    font-size: medium;
+    font-weight: 400;
+  }
+
+  .shopname {
+    font-size: 1.5rem;
+    padding-left: 0;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+
+  .healthyimg {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .healthyimg ul {
+    padding-left: 0;
+    list-style-position: inside;
+    /* Keeps bullet points centered with text */
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    height: auto;
+    /* Allow layout natural breathing room */
+  }
+
+  .healthyimg h2 {
+    font-size: large;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+  .contactus{
+    display: none;
+  }
+ 
+}

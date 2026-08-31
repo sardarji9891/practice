@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1 class="shopname">Food Shop</h1>
+        <div class="itemsection">
+            <div class="menu box">Menu</div>
+            <div class="shop box ">shop</div>
+            <div class="contactus box " id="contactuss" role="button" tabindex="0">services</div>
+            <div class="cart box" id="cart">cart</div>
+            <a href="login.html" class="signin">Sign in</a>
+        </div>
+    </header>
+    <section class="food-shop-banner">
+          </div>
+        <div class="foodshopimg"> <img src="carscoll/newfoodshop-101.png" alt="error"></div>
+    
+
+        <div class="mainline">
+            <h1>Your Cravings, Our <span>Creation</span></h1>
+            <p>Fresh ingredients, bold flavours, and delicious food made to satisfy every craving. Come hungry, leave
+                happy!</p>
+      
+    </section>
+    <section>
+        <div class="cartcontainer">
+            <div class="yourcart">
+                <h2>Your Cart</h2>
+                <button class="close"> close </button>
+            </div>
+
+            <!-- Items will be injected here dynamically -->
+            <div class="carditems">
+                <ul id="cart-items-list"></ul>
+            </div>
+
+            <div class="cart-total">
+                <div>Total</div>
+                <div class="totalprice">: ₹<span id="cart-total-price">0</span></div>
+            </div>
+
+
+        </div>
+    </section>
+    <main class="main">
+        <section class="foodsection">
+            <h1 class="fastfood">fast foods</h1>
+            <div class="imgboxmain">
+
+                <div class="imgbox">
+                    <img class="img1" src="carscoll\isamand-fast-food-6868812_1920.jpg" alt="food">
+                    <h4>The Crispy Aloo Tikki Burger</h4>
+                    <p>A golden, crispy potato patty inside a soft bun, topped with fresh onions and tomatoes. Finished
+                        with a drizzle of creamy tandoori mayo for the ultimate spicy crunch.</p>
+                    <div class="imgbutton">
+                        <button class="buy">Buy </button>
+                        <button class="addtocart" data-id="1" data-name="The Crispy Aloo Tikki Burger" data-price="79">
+                            cart</button>
+                    </div>
+
+                </div>
+                <div class="imgbox">
+                    <img class="img1" src="carscoll\anilsharma26-tacos-8076612_1920.jpg" alt="food">
+                    <h4>Gourmet Crispy Tacos</h4>
+                    <p>Three vibrant, crispy taco shells loaded with savory fillings, a rich drizzle of creamy sauce,
+                        and topped with delicate, edible flower petals. Served upright on a modern stainless steel rack
+                        alongside a refreshing glass of citrus juice.</p>
+                    <div class="imgbutton">
+                        <button class="buy">Buy </button>
+                        <button class="addtocart" data-id="2" data-name="Gourmet Crispy Tacos" data-price="100">
+                            cart</button>
+                    </div>
+
+                </div>
+                <div class="imgbox">
+                    <img class="img1" src="carscoll\pexels-bowl-1842294_1920.jpg" alt="food">
+                    <h4>Garlic Herb French Fries</h4>
+                    <p>Golden, crispy shoestring fries tossed in fine sea salt and piled high in a clean white ceramic
+                        bowl. Finely chopped fresh herbs and minced garlic are scattered throughout for a savory,
+                        aromatic crunch.</p>
+                    <div class="imgbutton">
+                        <button class="buy">Buy </button>
+                        <button class="addtocart" data-id="3" data-name="Garlic Herb French Fries" data-price="129">
+                            cart</button>
+                    </div>
+                </div>
+
+                <div class="imgbox">
+                    <img class="img1" src="carscoll\anilsharma26-food-6950998_1920.jpg" alt="food">
+                    <h4>Charcoal Grilled Seekh Kebabs</h4>
+                    <p>Four perfectly roasted, juicy seekh kebabs seasoned with traditional aromatic spices and
+                        garnished with fresh cilantro. Plated on a sleek black platter alongside a vibrant
+                        mint-coriander chutney, crisp red onion rings, and a slice of lime.</p>
+                    <div class="imgbutton">
+                        <button class="buy ">Buy </button>
+                        <button class="addtocart" data-id="4" data-name="Charcoal Grilled Seekh Kebabs"
+                            data-price="169"> cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mainbox2">
+            <div class="healthyitembox">
+                <div class="healthyimg">
+                    <img src="carscoll\hea1.jpg" alt="">
+                    <div class="imgdescript">
+                        <h2>Crucial Nutrients & Balance</h2>
+                        <ul>
+
+                            <li> A healthy diet delivers essential vitamins, minerals, and antioxidants to keep the body
+                                functioning optimally.</li>
+                            <li> It requires a balanced plate containing lean proteins, complex carbohydrates, and
+                                healthy
+                                fats.</li>
+                            <li> Eating a wide variety of colors from fruits and vegetables ensures you get different
+                                protective nutrients. </li>
+                            <li> Proper hydration with plenty of water is a foundational piece of keeping your
+                                metabolism
+                                running smoothly.</li>
+                            <li> Choosing whole food sources over heavily processed items preserves natural nutrients
+                                and
+                                dietary fiber.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="healthyimg">
+                    <img src="carscoll\hea2.jpg" alt="">
+                    <div class="imgdescript">
+
+                        <h2>Heart & Body Protection</h2>
+                        <ul>
+
+                            <li>Sustaining this eating pattern lowers the risk of chronic illnesses like type 2 diabetes
+                                and
+                                heart disease.</li>
+                            <li>High-fiber foods in the diet improve digestive health and help manage stable blood
+                                cholesterol levels.</li>
+                            <li>Cutting back on added sugars and excess sodium shields blood vessels and vital organs
+                                from
+                                long-term damage.</li>
+                            <li>A clean diet strengthens the immune system, helping the body fight off daily infections
+                                and
+                                viruses.</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="healthyimg">
+                    <img src="carscoll\hea3.jpg" alt="">
+                    <div class="imgdescript">
+                        <h2>Energy & Mental Focus</h2>
+                        <ul>
+
+                            <li>Nutrient-dense meals provide sustained physical energy, preventing the common crashes
+                                caused
+                                by sugary snacks.
+                            </li>
+                            <li>Balanced nutrition stabilizes blood sugar levels, which directly keeps your mood even
+                                and
+                                positive.</li>
+                            <li>Clean fuel supports sharp mental clarity, improving your daily focus, memory, and
+                                cognitive
+                                performance.</li>
+                            <li>Eating healthy foods improves overall sleep quality, allowing the body to repair itself
+                                efficiently overnight.</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer" id="footer">
+        <div class="footer-container">
+
+            <!-- Column 1: Brand & About -->
+            <div class="footer-column brand-info">
+                <h3 class="footer-logo">Food Shop</h3>
+                <p class="footer-text">Building beautiful digital experiences that make an impact. Let's create
+                    something great together.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Instagram">ig</a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-column">
+                <h4 class="footer-heading">Company</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Resources -->
+            <div class="footer-column">
+                <h4 class="footer-heading">Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#"> Food Blog</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Newsletter -->
+            <div class="footer-column newsletter">
+                <h4 class="footer-heading">Stay Updated</h4>
+                <p class="footer-text">Subscribe to our newsletter for the latest updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Bottom Row: Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 YourCompany. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="div">
+   <img id="image" alt="Random photo" />
+     <img id="image1" alt="Random photo" />
+       <img id="image2" alt="Random photo" />
+         <img id="image3" alt="Random photo" />
+
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
