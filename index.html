@@ -3,11 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width, initial-scale=1">
-    <title>Document</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food shop </title>
     <link rel="stylesheet" href="style.css">
+   
+
 </head>
 
+</html>
 <body>
 
     <header>
@@ -22,15 +25,15 @@
         </div>
     </header>
     <section class="food-shop-banner">
-          </div>
+        </div>
         <div class="foodshopimg"> <img src="carscoll/newfoodshop-101.png" alt="error"></div>
-    
+
 
         <div class="mainline">
             <h1>Your Cravings, Our <span>Creation</span></h1>
             <p>Fresh ingredients, bold flavours, and delicious food made to satisfy every craving. Come hungry, leave
                 happy!</p>
-      
+
     </section>
     <section>
         <div class="cartcontainer">
@@ -181,6 +184,15 @@
                 </div>
             </div>
         </section>
+        <section class="alertsection">
+            <div id="customAlert" class="alert-box hidden">
+  <div class="alert-content">
+    <p>Please enter a valid email address first.</p>
+    <button id="closeAlertBtn">OK</button>
+  </div>
+</div>
+
+        </section>
     </main>
     <footer class="site-footer" id="footer">
         <div class="footer-container">
@@ -224,11 +236,10 @@
                 <h4 class="footer-heading">Stay Updated</h4>
                 <p class="footer-text">Subscribe to our newsletter for the latest updates.</p>
                 <form class="newsletter-form">
-                    <input type="email" placeholder="Your email address" required>
-                    <button type="submit">Subscribe</button>
+                    <input id="feedback" type="email" placeholder="Your email address" required>
+                    <button id="submit" type="submit">Subscribe</button>
                 </form>
             </div>
-
         </div>
 
         <!-- Bottom Row: Copyright -->
@@ -236,15 +247,11 @@
             <p>&copy; 2026 YourCompany. All rights reserved.</p>
         </div>
     </footer>
-    <div class="div">
-   <img id="image" alt="Random photo" />
-     <img id="image1" alt="Random photo" />
-       <img id="image2" alt="Random photo" />
-         <img id="image3" alt="Random photo" />
 
-</div>
 
-    <script src="script.js"></script>
+    
+    <script src="script.js" defer></script>
+    
 </body>
 
 </html>

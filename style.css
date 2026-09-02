@@ -8,6 +8,7 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,7 +24,7 @@ body::-webkit-scrollbar {
   padding-bottom: 4rem;
   background: #eba613;
   background: linear-gradient(354deg, rgba(235, 166, 19, 1) 0%, rgba(250, 247, 242, 1) 40%, rgba(222, 170, 67, 0.64) 100%);
-  
+
 }
 
 /*    2. Header Navigation   */
@@ -350,6 +351,49 @@ food shop container */
 
 }
 
+/* alertsection */
+
+.alert-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Dimmed background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+
+.alert-content {
+  background: rgb(248, 245, 172);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.alert-content button {
+  margin-top: 15px;
+  padding: 8px 10px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  width: 110px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
 /*
    6. Footer Styles*/
 .site-footer {
@@ -530,8 +574,9 @@ food shop container */
   .newsletter-form {
     flex-direction: column;
   }
-  .contactus{
+
+  .contactus {
     display: none;
   }
- 
+
 }
