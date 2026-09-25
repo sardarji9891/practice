@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food shop</title>
+    <link rel="stylesheet" href="sign.css">
+</head>
+
+<body>
+    <main class="signupWrapper">
+
+       
+        <a href="index.html" class="backBtn">← Back to Menu</a>
+
+        <section class="signup">
+            <div class="signupHeader">
+                <h2>food<span>shop</span></h2>
+                <p> Please signup to your account.</p>
+            </div>
+
+            <div id="section0" class="signup0 ">
+                <form class="signupForm" onsubmit="event.preventDefault();">
+
+                    <div class="input">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="enter your email" required autocomplete="email">
+                    </div>
+
+                    <div class="input">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                        <div class="createPassword">
+                            <p>create new password</p>
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="submitBtn">Sign up</button>
+
+                </form>
+            </div>
+
+
+
+            <div id="section1" class="signup1">
+                <form class="signupForm" onsubmit="event.preventDefault();">
+
+                    <div class="input">
+                        <label for="name">enter your name</label>
+                        <input type="text" id="personName" placeholder="enter your name" required>
+                    </div>
+                    <div class="input">
+                        <label for="name">enter your last name</label>
+                        <input type="text" id="personLastName" placeholder="enter your last name" required>
+                    </div>
+                    <div class="input">
+                        <label for="name">Date Of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+
+                    <button id="nextBtnn" class="nextBtn">Next Page</button>
+            </div>
+
+
+
+
+            </form>
+            </div>
+
+            <div class="signupFooter">
+                <a href="login.html">login here</a>
+            </div>
+
+        </section>
+    </main>
+    <script>
+        const button = document.getElementById('nextBtnn');
+        const signup0 = document.getElementById('section0');
+        const signup1 = document.getElementById('section1');
+        const personName = document.getElementById('personName');
+        const personLastName = document.getElementById('personLastName');
+        const dob = document.getElementById('dob');
+
+        button.addEventListener('click', () => {
+            const firstName = personName.value.trim();
+            const lastName = personLastName.value.trim();
+            const birthDate = dob.value;
+
+            if (firstName === "" || lastName === "") {
+                alert('please enter your name')
+            }
+            else if (birthDate === "") {
+                alert('please enter your date of birth')
+            }
+            else {
+                signup1.style.display = 'none';
+                signup0.style.display = 'block';
+            }
+
+        });
+    </script>
+
+
+</body>
+
+</html>
